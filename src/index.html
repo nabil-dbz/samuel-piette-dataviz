@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Description" content="INF8808's Project Code">
+        <title>Samuel Piette</title>
+
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/tooltip.css">
+        <link rel="stylesheet" href="assets/typography.css">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="assets/materialize.css"  media="screen,projection"/>
+
+
+      </head>
+      <body>
+        <header>
+          <h1 class="centered-text">
+            SAMUEL PIETTE
+          </h1>
+        </header>
+        <main>
+          <div class="viz-container">
+            <div class="card row" id="global-viz">
+              <div class="col s3">
+                <img src="assets/images/samuel-piette.jpg" style="border-radius: 50%; width: 100%">
+              </div>
+              <div class="col s4">
+                <div class="row" style="margin: 0;">
+                  <div class="col s4">
+                    <img src="assets/images/cfmontreal.png" style="border-radius: 50%; width: 100%">
+                  </div>
+                  <div class="col s8">
+                    <h4 style="font-size: 2vw;">SAMUEL PIETTE</h4>
+                    <h5 style="font-size: 1vw;">CF Montreal</h5>
+                  </div>
+                </div>
+                  <svg id="global-info" style="width: 100%;"></svg>
+              </div>
+              <div class="col s4">
+                  <svg class="global-svg"></svg>
+              </div>
+              <div class="col s1">
+                <svg class="global-legend"></svg>
+              </div>
+            </div>
+           
+      
+            <!--------------------------------Bar Chart------------------------------->
+            <div class="card graph" id="bar-chart-viz" style="padding: 35px;">
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs">
+                    <li class="tab col s4"><a class="active" href="#titularizations">Titularizations</a></li>
+                    <li class="tab col s4"><a href="#minutes">Number of Minutes</a></li>
+                    <li class="tab col s4"><a href="#games">Games Played</a></li>
+                  </ul>
+                </div>
+                <h5 id="titularizations" class="col s12 centered-text">Number of Titularizations during 2021 Season - FC Montreal</h5>
+                <h5 id="minutes" class="col s12 centered-text">Number of Played Minutes during 2021 Season - FC Montreal</h5>
+                <h5 id="games" class="col s12 centered-text">Number of Played Games during 2021 Season - FC Montreal</h5>
+              </div>
+              <div class="chart-container">
+                <div class="graph" id="bar-chart">
+                  <div id="bar-chart-dataviz"></div>
+                </div>
+              </div>
+            </div>
+            <!------------------------------------------------------------------------>
+      
+      
+            <!-----------------------------Donut Chart-------------------------------->
+            <div class="donut-radar">
+              <div class="card" id="pie-container">
+                <div class="chart-container" id="pie-chart-viz">
+                  <svg class="pie-chart-svg"></svg>
+                  <svg class="pie-chart-legend"></svg>
+                </div>
+
+                <div class="row">
+                  <h5 id="key-passes" class="col s12 centered-text">Contribution of Key Passes</h5>
+                  <h5 id="completed-passes" class="col s12 centered-text">Contribution of Completed Passes</h5>
+                  <h5 id="shots" class="col s12 centered-text">Contribution of Shots On Target</h5>
+                  <div class="col s12">
+                    <ul class="tabs">
+                      <li class="tab col s4"><a class="active" href="#key-passes">Key Passes</a></li>
+                      <li class="tab col s4"><a href="#completed-passes">Completed Passes</a></li>
+                      <li class="tab col s4"><a href="#shots">Shots On Target</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!------------------------------------------------------------------------>
+              
+              <!------------------------------Radar Chart------------------------------->
+              <!-- <h3>Radar Chart Visualization</h3> -->
+              <div class="card chart-container" id="radar-chart-viz">
+                <svg class="radar-chart-svg"></svg>
+                <svg class="radar-chart-legend"></svg>        
+              </div>
+            </div>
+            <!------------------------------------------------------------------------>
+
+            <!-------------------------Scatter Plot----------------------------------->
+            
+            <div class="card graph" id="plot-viz"> 
+              <div class="chart-container">
+                <div class="row">
+                  <h5 class="centered-text">Base Salary By Market Value</h5>
+                  <svg class="plot-svg"></svg>
+                </div>
+              </div>
+              <!-- <form id="chart1" action="" class="radioButtons">
+                <input type="radio" name="chart" id="line1chart" value="Market Value 1,000,000€" checked>
+                <label for="line1chart">Market Value</label>
+               
+                <input type="radio" name="chart" id="line2chart" value="Guaranteed Compensation $100,000">  
+                <label for="line2chart">Guaranteed Compensation</label></form> -->
+             
+            </div>
+            <!------------------------------------------------------------------------>
+            
+          </main>
+        <footer>
+        </footer>  
+        <script src="https://d3js.org/d3.v5.js"></script>
+        <script type="text/javascript" src="./scripts/materialize.js"></script>
+        <script src="./index.js"></script>
+      </body>
+</html>

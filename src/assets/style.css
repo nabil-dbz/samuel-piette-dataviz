@@ -1,0 +1,83 @@
+body {
+    max-width: 80%;
+    margin: auto !important;
+}
+
+.centered-text {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.tabs .tab a {
+  color: rgba(79, 90, 88, 0.7) !important;
+}
+
+.tabs .tab a:hover {
+  color: #080808 !important;
+}
+
+.tabs .tab a:focus.active {
+  color: #080808 !important;
+  background-color: rgba(133, 153, 151, 0.2) !important;
+}
+
+.tabs .indicator {
+  background-color: #163330 !important;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+}
+
+#pie-container {
+  width: 45%;
+}
+
+#radar-chart-viz {
+  width: 55%;
+}
+
+.donut-radar {
+  display: flex;
+}
+
+#rect10 {
+  fill: blue;
+}
+
+.line {
+  stroke: #e4002b;
+  fill: none;
+  stroke-width: 3;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+input[type="radio"] {
+  opacity: 1 !important;
+  float:left;
+}
+
+.tooltip {
+  display: inline;
+  position: fixed;
+}
+
+#chart1{
+    float: right !important;
+    position:absolute;
+    right : 0;
+    
+    transform: translate(-50%, 0);
+    vertical-align: middle !important;
+}
